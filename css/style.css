@@ -5,6 +5,10 @@
     --dark: #1A2A36;
 }
 
+.logo {
+    width: 200px;
+}
+
 .fw-medium {
     font-weight: 500 !important;
 }
@@ -124,6 +128,9 @@
 }
 
 @media (min-width: 992px) {
+    .logo {
+        width: 250px;
+    }
     .navbar .nav-item .dropdown-menu {
         display: block;
         border: none;
