@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #5FBF05;
+    --primary: #6DBE45;
     --light: #F6F7F8;
     --dark: #1A2A36;
 }
@@ -573,4 +573,35 @@
 
 .footer .copyright a:hover {
     color: var(--primary);
+}
+
+.owl-carousel-item {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.owl-carousel-item img,
+.owl-carousel-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.owl-carousel-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
