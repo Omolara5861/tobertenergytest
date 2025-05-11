@@ -113,7 +113,7 @@
     <!-- Page Header End -->
 
     <!-- Projects Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5 projects">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h6 class="text-primary">Our Projects</h6>
@@ -126,143 +126,40 @@
                         <li class="mx-2" data-filter=".first">Industrial Electrical Installations</li>
                         <li class="mx-2" data-filter=".second">Commercial Electrical Installations</li>
                         <li class="mx-2" data-filter=".third">Residential Electrical Installations</li>
+                        <li class="mx-2" data-filter=".fourth">Renewable Energy Installations</li>
+                        <li class="mx-2" data-filter=".fifth">Outdoors Electrical Installations</li>
                     </ul>
                 </div>
             </div>
             <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.5s">
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img height="271.99" class="w-100 object-fit-cover" src="img/industry1.jpg" alt="Industrial Mchine">
+                <template id="portfolio-item-tpl">
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="portfolio-img rounded overflow-hidden">
+                        <img height="271.99" class="w-100 object-fit-cover" alt="">
                         <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/industry1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
+                          <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" data-lightbox="portfolio">
+                            <i class="fa fa-eye"></i>
+                          </a>
+                          <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1">
+                            <i class="fa fa-link"></i>
+                          </a>
                         </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Industrial Electrical Installations</p>
+                      </div>
+                      <div class="pt-3">
+                        <p class="text-primary mb-0"></p>
                         <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
+                        <h5 class="mb-4">Trusted Pioneers in Electrical and Energy Infrastructure</h5>
+                      </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img height="271.99" class="w-100 object-fit-cover" src="img/commercial.jpg" alt="Industry">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/commercial.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Commercial Electrical Installations</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item third">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img height="271.99" class="w-100 object-fit-cover" src="img/img-600x400-4.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Residential Electrical Installations</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img height="271.99" class="w-100 object-fit-cover" src="img/industrial2.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/industrial2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Industrial Electrical Installations</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img height="271.99" class="w-100 object-fit-cover" src="img/commercial2.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/commercial2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Commercial Electrical Installations</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item third">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img height="271.99" class="w-100 object-fit-cover" src="img/img-600x400-1.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Residential Electrical Installations</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img height="271.99" class="w-100 object-fit-cover" src="img/industrial3.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/industrial3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Industrial Electrical Installations</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img height="271.99" class="w-100 object-fit-cover" src="img/commercial3.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/commercial3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Commercial Electrical Installations</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item third">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img height="271.99" class="w-100 object-fit-cover" src="img/img-600x400-1.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Residential Electrical Installations</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                    </div>
-                </div>
+                  </template>
+                  
             </div>
         </div>
     </div>
     <!-- Projects End -->
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5 ">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h6 class="text-primary">Testimonial</h6>
