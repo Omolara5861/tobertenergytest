@@ -98,85 +98,55 @@
 })(jQuery);
 
 const projects = [
-    { filter: 'first',  label: 'Industrial Electrical Installations', imgPrefix: 'industrial', count: 9 },
-    { filter: 'second', label: 'Commercial Electrical Installations', imgPrefix: 'commercial',  count: 4 },
-    { filter: 'third',  label: 'Residential Electrical Installations', imgPrefix: 'residential', count: 8 },
-    { filter: 'fourth', label: 'Renewable Energy Installations', imgPrefix: 'renewable',   count: 9 },
-    { filter: 'fifth',  label: 'Outdoors Electrical Installations',  imgPrefix: 'outdoor',     count: 8 },
-  ];
+    { filter: 'first', label: 'Industrial Electrical Installations', imgPrefix: 'industrial', count: 9 },
+    { filter: 'second', label: 'Commercial Electrical Installations', imgPrefix: 'commercial', count: 4 },
+    { filter: 'third', label: 'Residential Electrical Installations', imgPrefix: 'residential', count: 8 },
+    { filter: 'fourth', label: 'Renewable Energy Installations', imgPrefix: 'renewable', count: 9 },
+    { filter: 'fifth', label: 'Outdoors Electrical Installations', imgPrefix: 'outdoor', count: 8 },
+];
 
-  const container = document.querySelector('.portfolio-container');
-  const tpl       = document.getElementById('portfolio-item-tpl').content;
-  container.innerHTML = '';
+const container = document.querySelector('.portfolio-container');
+const tpl = document.getElementById('portfolio-item-tpl').content;
+container.innerHTML = '';
 
-  projects.forEach(({filter, label, imgPrefix, count}) => {
+projects.forEach(({ filter, label, imgPrefix, count }) => {
     for (let i = 1; i <= count; i++) {
-      // clone the template
-      const clone = document.importNode(tpl, true);
-      const item  = clone.querySelector('.portfolio-item');
-      const img   = clone.querySelector('img');
-      const eye   = clone.querySelector('[data-lightbox]');
-      const txt   = clone.querySelector('p');
+        // clone the template
+        const clone = document.importNode(tpl, true);
+        const item = clone.querySelector('.portfolio-item');
+        const img = clone.querySelector('img');
+        const eye = clone.querySelector('[data-lightbox]');
+        const txt = clone.querySelector('p');
 
-      // apply data
-      item.classList.add(filter);
-      const src = `img/${imgPrefix}${i}.jpg`;
-      img.src     = src;
-      img.alt     = `${label} #${i}`;
-      eye.href    = src;
-      txt.textContent = label;
+        // apply data
+        item.classList.add(filter);
+        const src = `img/${imgPrefix}${i}.jpg`;
+        img.src = src;
+        img.alt = `${label} #${i}`;
+        eye.href = src;
+        txt.textContent = label;
 
-      container.appendChild(clone);
+        container.appendChild(clone);
     }
-  });
+});
 
-  // Re-init Wow.js and/or Isotope if needed:
-  new WOW().init();
+// Re-init Wow.js and/or Isotope if needed:
+new WOW().init();
 
-  const filters = document.querySelector('#portfolio-flters');
-  const items   = document.querySelectorAll('.portfolio-item');
+const filters = document.querySelector('#portfolio-flters');
+const items = document.querySelectorAll('.portfolio-item');
 
-  filters.addEventListener('click', e => {
+filters.addEventListener('click', e => {
     if (e.target.tagName !== 'LI') return;
     filters.querySelectorAll('li').forEach(li => li.classList.remove('active'));
     e.target.classList.add('active');
     const filter = e.target.getAttribute('data-filter');
     items.forEach(item => {
-      if (filter === '*' || item.classList.contains(filter.slice(1))) {
-        item.style.display = '';
-      } else {
-        item.style.display = 'none';
-      }
+        if (filter === '*' || item.classList.contains(filter.slice(1))) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
     });
-  });
+});
 
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
-    e.preventDefault();
-  
-    const form = e.target;
-    const formData = new FormData(form);
-    const statusText = document.getElementById("form-status");
-  
-    try {
-      const response = await fetch("https://formspree.io/f/{your_form_id}", {
-        method: "POST",
-        headers: {
-          'Accept': 'application/json'
-        },
-        body: formData
-      });
-  
-      if (response.ok) {
-        statusText.textContent = "✅ Message sent successfully!";
-        statusText.style.color = "green";
-        form.reset();
-      } else {
-        const data = await response.json();
-        statusText.textContent = data.errors ? data.errors[0].message : "❌ Something went wrong.";
-        statusText.style.color = "red";
-      }
-    } catch (error) {
-      statusText.textContent = "❌ Network error. Please try again.";
-      statusText.style.color = "red";
-    }
-  });
