@@ -98,10 +98,10 @@
 })(jQuery);
 
 const projects = [
-    { filter: 'first', label: 'Industrial Electrical Installations', imgPrefix: 'industrial', count: 9 },
+    { filter: 'first', label: 'Industrial Electrical Installations', imgPrefix: 'industrial', count: 15 },
     { filter: 'second', label: 'Commercial Electrical Installations', imgPrefix: 'commercial', count: 4 },
     { filter: 'third', label: 'Residential Electrical Installations', imgPrefix: 'residential', count: 8 },
-    { filter: 'fourth', label: 'Renewable Energy Installations', imgPrefix: 'renewable', count: 9 },
+    { filter: 'fourth', label: 'Renewable Energy Installations', imgPrefix: 'renewable', count: 12 },
     { filter: 'fifth', label: 'Outdoors Electrical Installations', imgPrefix: 'outdoor', count: 8 },
 ];
 
