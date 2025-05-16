@@ -626,3 +626,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+.object-fit-cover {
+    object-fit: cover;
+    object-position:  0% 20% !important;
+}
